@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h2>Wszystkie projekty</h2>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let project of projects; let i = index">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">{{ project.name }}</h3>
+                    <p class="card-text">{{ project.description }}</p>
+                    <button class="btn btn-primary" (click)="workOnProject(project.id)">Pracuj</button>
+                    <button *ngIf="userRole === 'Admin' || userRole === 'DevOps'" class="btn btn-danger"
+                        (click)="deleteProject(i)">Usuń</button>
+                    <button *ngIf="userRole === 'Admin' || userRole === 'DevOps'" class="btn btn-secondary"
+                        (click)="editProject(project, i)">Edytuj</button>
+                    <button class="btn btn-info" [routerLink]="['/projects', project.id]">Szczegóły</button>
+                </div>
+            </div>
+        </div>
+        <button *ngIf="userRole === 'Admin' || userRole === 'DevOps'" class="btn btn-primary"
+            (click)="toggleAddForm()">Nowy projekt</button>
+        <div *ngIf="showAddForm">
+            <h3 *ngIf="editMode">Edytuj projekt</h3>
+            <h3 *ngIf="!editMode">Dodaj projekt</h3>
+            <app-add-project (projectAdded)="addProject($event)" *ngIf="!editMode"></app-add-project>
+            <form (ngSubmit)="updateProject()" *ngIf="editMode" class="my-4">
+                <div class="form-group">
+                    <label for="name">Tytuł:</label>
+                    <input type="text" id="name" name="name" [(ngModel)]="editedProject.name" required
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="description">Opis:</label>
+                    <textarea id="description" name="description" [(ngModel)]="editedProject.description" required
+                        class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    {{ editMode ? 'Zapisz zmiany' : 'Dodaj projekt' }}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

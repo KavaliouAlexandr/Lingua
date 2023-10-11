@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<li class="list-group-item custom-list-item" *ngFor="let user of users">
+
+    <div class="custom-list-item">
+        <strong>Login:</strong> {{ user.login }}<br>
+        <strong>Imię:</strong> {{ user.firstName }}<br>
+        <strong>Nazwisko:</strong> {{ user.lastName }}<br>
+        <strong>Rola:</strong> {{ user.role }}
+
+        <button *ngIf="userRole === 'Admin' || user.id === loggedInUserId" class="btn btn-primary btn-sm"
+            (click)="editUser(user)">Edytuj</button>
+
+        <div *ngIf="user.editMode">
+            <form (submit)="saveUser(user)">
+                <label>
+                    Login:
+                    <input type="text" class="form-control" [(ngModel)]="user.login" name="login">
+                </label>
+                <br>
+                <label>
+                    Imię:
+                    <input type="text" class="form-control" [(ngModel)]="user.firstName" name="firstName">
+                </label>
+                <br>
+                <label>
+                    Nazwisko:
+                    <input type="text" class="form-control" [(ngModel)]="user.lastName" name="lastName">
+                </label>
+                <br>
+                <label>
+                    Rola:
+                    <input type="text" class="form-control" [(ngModel)]="user.role" name="role">
+                </label>
+                <br>
+                <label>
+                    Hasło:
+                    <input type="password" class="form-control" [(ngModel)]="user.password" name="password">
+                </label>
+                <br>
+                <button type="submit" class="btn btn-success btn-sm">Zapisz</button>
+                <button type="button" class="btn btn-secondary btn-sm" (click)="cancelEdit(user)">Anuluj</button>
+            </form>
+        </div>
+    </div>
+</li>

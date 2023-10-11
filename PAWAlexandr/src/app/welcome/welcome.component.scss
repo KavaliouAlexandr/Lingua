@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+img {
+    width: 50%;
+}
+
+.welcome {
+    width: 30%;
+}
+
+.welcome__auth {
+    padding-top: 5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    color: red;
+}

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Todo</h3>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let task of getTasksByStatus('todo')" (click)="toggleDetails(task)"
+                    [ngClass]="{ 'selected-task': task.showDetails }">
+                    {{ task.name }}
+                    <button class="btn btn-success btn-sm" (click)="moveTask(task, 'doing')">Move to Doing</button>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Doing</h3>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let task of getTasksByStatus('doing')" (click)="toggleDetails(task)"
+                    [ngClass]="{ 'selected-task': task.showDetails }">
+                    {{ task.name }}
+                    <button class="btn btn-success btn-sm" (click)="moveTask(task, 'todo')">Move to Todo</button>
+                    <button class="btn btn-success btn-sm" (click)="moveTask(task, 'done')">Move to Done</button>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Done</h3>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let task of getTasksByStatus('done')" (click)="toggleDetails(task)"
+                    [ngClass]="{ 'selected-task': task.showDetails }">
+                    {{ task.name }}
+                    <button class="btn btn-success btn-sm" (click)="moveTask(task, 'doing')">Move to Doing</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mt-3" *ngIf="selectedTask">
+        <div class="col-md-12">
+            <app-details-task [task]="selectedTask"></app-details-task>
+        </div>
+    </div>
+</div>

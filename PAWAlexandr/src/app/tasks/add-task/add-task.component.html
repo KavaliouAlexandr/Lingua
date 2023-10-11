@@ -1,0 +1,62 @@
+<form (ngSubmit)="addTask()">
+    <h3>Dodaj zadanie:</h3>
+    <div class="form-group">
+        <label>Nazwa zadania:</label>
+        <input type="text" class="form-control" [(ngModel)]="newTaskName" name="taskName" required>
+    </div>
+    <div class="form-group">
+        <label>Opis zadania:</label>
+        <textarea class="form-control" [(ngModel)]="newTaskDescription" name="taskDescription"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Priorytet:</label>
+        <select class="form-control" [(ngModel)]="newTaskPriority" name="taskPriority" required>
+            <option value="Wysoki">Wysoki</option>
+            <option value="Średni">Średni</option>
+            <option value="Niski">Niski</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Funkcjonalność:</label>
+        <input type="text" class="form-control" [(ngModel)]="newTaskFunctionality" name="taskFunctionality" required>
+    </div>
+    <div class="form-group">
+        <label>Przewidywany czas wykonania:</label>
+        <input type="text" class="form-control" [(ngModel)]="newTaskEstimatedTime" name="taskEstimatedTime" required>
+    </div>
+    <div class="form-group">
+        <label>Stan:</label>
+        <select class="form-control" [(ngModel)]="newTaskStatus" name="taskStatus" required disabled>
+            <option value="todo">Todo</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Data dodania:</label>
+        <input type="date" class="form-control" [(ngModel)]="newTaskStartDate" name="taskStartDate" required>
+    </div>
+    <div class="form-group">
+        <label>Data startu:</label>
+        <input type="date" class="form-control" [(ngModel)]="newTaskStartDate" name="taskStartDate" required>
+    </div>
+    <div class="form-group">
+        <label>Data zakończenia:</label>
+        <input type="date" class="form-control" [(ngModel)]="newTaskEndDate" name="taskEndDate">
+    </div>
+    <div class="form-group">
+        <label for="functionality">Funkcjonalność:</label>
+        <select id="functionality" [(ngModel)]="newTaskFunctionality" name="taskFunctionality">
+            <option *ngFor="let functionality of functionalities" [value]="functionality.id">{{ functionality.name }}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Użytkownik odpowiedzialny:</label>
+        <select class="form-control" [(ngModel)]="newTaskAssignedUser" name="taskAssignedUser" required>
+            <option value="devops">DevOps</option>
+            <option value="developer">Developer</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+</form>

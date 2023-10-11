@@ -1,0 +1,16 @@
+<section class="vh-100 bg-secondary bg-gradienе py-0">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-16 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <app-login *ngIf="!isAuth" (authEvent)="switchLoginAndRegister()"></app-login>
+                        <app-register *ngIf="isAuth" (authEvent)="switchLoginAndRegister()"></app-register>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

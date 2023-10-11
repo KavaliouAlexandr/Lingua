@@ -1,0 +1,12 @@
+<form (ngSubmit)="submitForm()" class="my-4">
+    <div class="form-group">
+        <label for="name">Tytuł:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="projectName" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="description">Opis:</label>
+        <textarea id="description" name="description" [(ngModel)]="projectDescription" required
+            class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+</form>

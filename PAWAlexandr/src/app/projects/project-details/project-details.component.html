@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+
+<div class="container">
+    <div class="row" *ngIf="project">
+        <div class="col-md-8 offset-md-2">
+            <h2>Projekt: {{ project.name }}</h2>
+            <p class="mb-2">Czas rozpoczęcia: {{ project.startTime | date }}</p>
+            <p class="mb-2">Przewidywany czas trwania: {{ project.estimatedDuration }}</p>
+            <p>Opis: {{ project.description }}</p>
+            <button *ngIf="isAdmin || isDevOps" class="btn btn-primary" (click)="editProject()">Edytuj</button>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="showEditSection && (isAdmin || isDevOps)">
+        <div class="col-md-8 offset-md-2">
+            <h3>Edytuj projekt</h3>
+            <app-edit-project [project]="project" (projectUpdated)="updateProject($event)"></app-edit-project>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="!project && !showEditSection">
+        <div class="col-md-8 offset-md-2">
+            <p>Projekt nie został znaleziony.</p>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="showEditSection && !(isAdmin || isDevOps)">
+        <div class="col-md-8 offset-md-2">
+            <p>Nie masz uprawnień do edycji projektu.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <a routerLink="/projects" class="btn btn-primary">Powrót do projektu</a>
+        </div>
+    </div>
+</div>

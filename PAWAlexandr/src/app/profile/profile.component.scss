@@ -1,0 +1,38 @@
+.container {
+    margin-top: 20px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.text-danger {
+    color: red;
+}
+
+.alert-success {
+    margin-top: 10px;
+}

@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Twoje funkcjonalności:</h2>
+            <ul>
+                <li *ngFor="let functionality of userFunctionalities">
+                    <ng-container *ngIf="functionality.owner === loggedInUser?.id">
+                        {{ functionality.name }}
+                    </ng-container>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h2>Zadania przypisane do Ciebie:</h2>
+            <ul>
+                <li *ngFor="let task of userTasks">
+                    {{ task.name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Zmień hasło</h2>
+
+            <div class="form-group" *ngIf="loggedInUser">
+                <label for="securityQuestion">Pytanie pomocnicze:</label>
+                <p class="form-control">{{ loggedInUser.securityQuestion }}</p>
+            </div>
+
+            <div class="form-group">
+                <label for="securityAnswer">Odpowiedź na pytanie pomocnicze:</label>
+                <input type="text" id="securityAnswer" [(ngModel)]="securityAnswer" class="form-control" required>
+                <div class="text-danger" *ngIf="!securityAnswerCorrect">Podana odpowiedź na pytanie pomocnicze jest
+                    niepoprawna</div>
+            </div>
+
+            <div class="form-group">
+                <label for="newPassword">Nowe hasło:</label>
+                <input type="password" id="newPassword" [(ngModel)]="newPassword" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Potwierdź hasło:</label>
+                <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" class="form-control" required>
+            </div>
+
+            <button class="btn btn-primary" (click)="changePassword()">Zmień hasło</button>
+
+            <div class="alert alert-success mt-3" *ngIf="passwordChanged">Hasło zostało zmienione</div>
+        </div>
+    </div>
+
+    <!-- Display user information -->
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Informacje o użytkowniku</h2>
+            <p><strong>Imię:</strong> {{ firstName }}</p>
+            <p><strong>Nazwisko:</strong> {{ lastName }}</p>
+            <p><strong>Login:</strong> {{ loggedInUser?.login }}</p>
+            <p><strong>Rola:</strong> {{ role }}</p>
+        </div>
+    </div>
+</div>

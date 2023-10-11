@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h1>{{ projectName }}</h1>
+    <div *ngIf="!selectedFunctionality">
+        <h2>Lista funkcjonalności</h2>
+        <div class="row">
+            <div class="col">
+                <h3>Todo:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let functionality of getFunctionalitiesByStatus('todo')"
+                        (click)="selectFunctionality(functionality)">
+                        {{ functionality.name }}
+                        <button class="btn btn-success" (click)="moveFunctionality(functionality, 'doing')">Move to
+                            Doing</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Doing:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let functionality of getFunctionalitiesByStatus('doing')"
+                        (click)="selectFunctionality(functionality)">
+                        {{ functionality.name }}
+                        <button class="btn btn-success" (click)="moveFunctionality(functionality, 'todo')">Move to
+                            Todo</button>
+                        <button class="btn btn-success" (click)="moveFunctionality(functionality, 'done')">Move to
+                            Done</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Done:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let functionality of getFunctionalitiesByStatus('done')"
+                        (click)="selectFunctionality(functionality)">
+                        {{ functionality.name }}
+                        <button class="btn btn-success" (click)="moveFunctionality(functionality, 'doing')">Move to
+                            Doing</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" *ngIf="canAddFunctionality()" (click)="showAddFunctionality = true">
+                    Dodaj funkcjonalność
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="showAddFunctionality">
+        <app-add-functionality (functionalityAdded)="addFunctionality($event)"></app-add-functionality>
+        <button class="btn btn-primary" (click)="showAddFunctionality = false">
+            Anuluj
+        </button>
+    </div>
+
+    <app-details-functionality *ngIf="selectedFunctionality"
+        [functionality]="selectedFunctionality"></app-details-functionality>
+
+    <div *ngIf="selectedFunctionality">
+        <app-tasks></app-tasks>
+        <div *ngIf="selectedFunctionality && showAddTask">
+            <app-add-task [functionalities]="functionalities" (taskAdded)="addTask($event)"></app-add-task>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" *ngIf="selectedFunctionality && !showAddTask" (click)="showAddTask = true">
+        Dodaj zadanie
+    </button>
+
+    <button class="btn btn-primary" *ngIf="selectedFunctionality && showAddTask" (click)="showAddTask = false">
+        Anuluj dodawanie zadania
+    </button>
+
+
+    <button class="btn btn-primary" *ngIf="selectedFunctionality" (click)="clearSelectedFunctionality()">
+        Powrót do listy funkcjonalności
+    </button>
+
+    <div class="mt-3" *ngIf="!selectedFunctionality">
+        <button routerLink="/projects" class="btn btn-primary">
+            Powrót do wszystkich projektów
+        </button>
+    </div>
+
+    <!-- ... -->
+</div>

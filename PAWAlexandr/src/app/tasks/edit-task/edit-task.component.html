@@ -1,0 +1,22 @@
+<div class="form-group">
+    <label for="name">Nazwa:</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="task.name" name="name">
+</div>
+
+<div class="form-group">
+    <label for="status">Status:</label>
+    <input type="text" class="form-control" id="status" [(ngModel)]="task.status" name="status">
+</div>
+
+<div class="form-group">
+    <label for="description">Opis:</label>
+    <textarea class="form-control" id="description" [(ngModel)]="task.description" name="description"></textarea>
+</div>
+
+<div class="form-group">
+    <label for="priority">Priorytet:</label>
+    <input type="text" class="form-control" id="priority" [(ngModel)]="task.priority" name="priority">
+</div>
+
+<button class="btn btn-primary" (click)="saveChanges()">Zapisz zmiany</button>
+<button class="btn btn-secondary" (click)="cancelEdit.emit()">Anuluj</button>
