@@ -1,5 +1,9 @@
 .container {
-    margin-top: 20px;
+    
+    // margin: 0; /* Убирает отступы по умолчанию */
+    background-color: #a4a8ac; /* bg-secondary - цвет фона (замените на ваш желаемый цвет) */
+    // background-image: linear-gradient(to bottom, #6c757d, #495057); /* bg-gradient - градиентный фон (замените цвета) */
+    // padding: 0; /* py-0 - вертикальный внутренний отступ */
 }
 
 h2 {
@@ -8,6 +12,7 @@ h2 {
 }
 
 .card {
+    margin-top: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
