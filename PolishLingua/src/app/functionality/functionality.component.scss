@@ -1,8 +1,14 @@
 .container {
     margin-top: 20px;
+    
+}
+
+h1 {
+    text-align: center;
 }
 
 h2 {
+    text-align: center;
     margin-top: 20px;
     font-size: 24px;
 }
@@ -47,5 +53,11 @@ h2 {
 }
 
 .mt-3 {
+    text-align: center;
     margin-top: 10px;
+}
+
+p {
+    text-align: center;
+    line-height: 1.6;
 }

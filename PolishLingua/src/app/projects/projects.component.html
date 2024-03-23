@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <h3 class="card-title">{{ project.name }}</h3>
                     <p class="card-text">{{ project.description }}</p>
-                    <button class="btn btn-primary" (click)="workOnProject(project.id)">Pracuj</button>
+                    <button class="btn btn-primary" (click)="workOnProject(project.id)">Zacznij</button>
                     <button *ngIf="userRole === 'Admin' || userRole === 'DevOps'" class="btn btn-danger"
                         (click)="deleteProject(i)">Usuń</button>
                     <button *ngIf="userRole === 'Admin' || userRole === 'DevOps'" class="btn btn-secondary"

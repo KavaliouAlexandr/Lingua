@@ -101,20 +101,20 @@ export class ProjectsComponent implements OnInit {
     return [
       {
         id: '1',
-        name: 'Project A',
+        name: 'Poziom A1',
         description:
-          'Mauris a ex hendrerit, bibendum lectus non, auctor neque. Fusce ut lorem ante. Morbi blandit purus gravida turpis dapibus rutrum.',
+          'Na poziomie A1 znajdziesz solidne fundamenty do rozpoczęcia swojej przygody z nowym językiem! Jest to idealna opcja dla całkowitych początkujących, którzy dopiero zaczynają swoją podróż z językiem obcym.',
         startTime: new Date(),
         duration: '',
-        estimatedDuration: '',
+        estimatedDuration: '1 miesiąć',
         totalHours: 0,
         people: []
       },
       {
         id: '2',
-        name: 'Project B',
+        name: 'Poziom A2',
         description:
-          'Mauris a ex hendrerit, bibendum lectus non, auctor neque. Fusce ut lorem ante. Morbi blandit purus gravida turpis dapibus rutrum.',
+          'Poziom A2 to kolejny krok w Twojej nauce języka, oferujący kontynuację fundamentów, które zdobyłeś/aś na poziomie A1. Jest to idealny poziom dla osób, które już posiadają pewne podstawy językowe i chcą rozwijać swoje umiejętności komunikacyjne.',
         startTime: new Date(),
         duration: '',
         estimatedDuration: '',
@@ -123,9 +123,42 @@ export class ProjectsComponent implements OnInit {
       },
       {
         id: '3',
-        name: 'Project C',
+        name: 'Poziom B1',
         description:
-          'Mauris a ex hendrerit, bibendum lectus non, auctor neque. Fusce ut lorem ante. Morbi blandit purus gravida turpis dapibus rutrum.',
+          'Poziom B1 to kluczowy etap w Twojej nauce języka, gdzie zyskasz większą swobodę w komunikacji oraz zdolność do porozumiewania się w różnorodnych sytuacjach. Jest to poziom, na którym możesz poczuć, że Twoje umiejętności językowe naprawdę rozwijają się.',
+        startTime: new Date(),
+        duration: '',
+        estimatedDuration: '',
+        totalHours: 0,
+        people: []
+      },
+      {
+        id: '4',
+        name: 'Poziom B2',
+        description:
+          'Poziom B2 to etap, na którym Twoje umiejętności językowe stają się coraz bardziej wyrafinowane, a Ty sam/a zaczynasz czuć się coraz bardziej pewnie w komunikacji. To idealny moment, aby poszerzyć swoje horyzonty językowe i przekroczyć kolejną barierę w nauce.',
+        startTime: new Date(),
+        duration: '',
+        estimatedDuration: '',
+        totalHours: 0,
+        people: []
+      },
+      {
+        id: '5',
+        name: 'Poziom C1',
+        description:
+          'Poziom C1 to etap, na którym stajesz się prawdziwie biegłym użytkownikiem języka, zdolnym do swobodnej komunikacji na różnorodne tematy oraz do zrozumienia złożonych tekstów.',
+        startTime: new Date(),
+        duration: '',
+        estimatedDuration: '',
+        totalHours: 0,
+        people: []
+      },
+      {
+        id: '6',
+        name: 'Poziom C2',
+        description:
+          'Poziom C2 to najwyższy poziom znajomości języka, który oznacza doskonałą biegłość w komunikacji. Osoby na tym poziomie potrafią swobodnie posługiwać się językiem w każdym kontekście, zarówno w mowie, jak i piśmie.',
         startTime: new Date(),
         duration: '',
         estimatedDuration: '',
