@@ -3,11 +3,26 @@
 <div class="container">
     <h1>{{ projectName }}</h1>
     
-    <div class="lesson">
-        <ul class="photo"> 
-            
-        </ul>
-
+    <div class="zadania">
+        <div class="row" *ngIf="!selectedFunctionality">
+            <button routerLink="/projects" class="btn btn-primary">
+                Zadanie 1
+            </button>
+            <button routerLink="/projects" class="btn btn-primary">
+                Zadanie 2
+            </button>
+            <button routerLink="/projects" class="btn btn-primary">
+                Zadanie 3
+            </button>
+            <button routerLink="/projects" class="btn btn-primary">
+                Zadanie 4
+            </button>
+            <button routerLink="/projects" class="btn btn-primary">
+                Zadanie 5
+            </button>
+            <button routerLink="/projects" class="btn btn-primary">
+                Test
+            </button>
     </div>
     
 
@@ -18,6 +33,8 @@
 
     </div>
     <!-- ... -->
+</div>
+<div class="end">
     <h2>Kontakt</h2>
     <p>Skontaktuj się z nami, aby dowiedzieć się więcej o naszej ofercie kursów i rozpocząć swoją przygodę z nauką języka!</p>
     <p>Email: info@naukajęzyka.pl</p>

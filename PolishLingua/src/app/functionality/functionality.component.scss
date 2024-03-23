@@ -1,21 +1,32 @@
 .container {
-    margin-top: 20px;
+    margin-top: 10px;
     
 }
 
 h1 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
     text-align: center;
+    margin-left: 10px;
 }
 
 h2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 24px;
 }
 
 .row {
+    text-align: center;
     margin-top: 20px;
+    width: 300px; 
+    margin: 0 auto;
+    
+   
 }
+
+
 
 .col {
     margin-bottom: 20px;
@@ -29,18 +40,22 @@ h2 {
 }
 
 .btn {
+    font-size: 20px;
     margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #3b3b3b;
+    border-color: #3b3b3b;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #999999;
+    border-color: #999999;
 }
+
 
 .btn-success {
     background-color: #28a745;
@@ -55,9 +70,23 @@ h2 {
 .mt-3 {
     text-align: center;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 p {
     text-align: center;
     line-height: 1.6;
 }
+
+.end {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+}
+

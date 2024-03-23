@@ -8,6 +8,7 @@ import { Task } from '../models/task.model';
   styleUrls: ['./functionality.component.scss']
 })
 export class FunctionalityComponent implements OnInit {
+  
   functionalities: Functionality[] = [];
   showAddTask: boolean = false;
 
