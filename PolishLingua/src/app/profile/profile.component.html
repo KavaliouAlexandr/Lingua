@@ -3,6 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
+            
             <h2>Twój Profil:</h2>
             <ul>
                 <li *ngFor="let functionality of userFunctionalities">
@@ -11,17 +12,18 @@
                     </ng-container>
                 </li>
             </ul>
-            <h2>Informacje o użytkowniku</h2>
-                    <p><strong>Imię:</strong> {{ firstName }}</p>
-                    <p><strong>Nazwisko:</strong> {{ lastName }}</p>
-                    <p><strong>Login:</strong> {{ loggedInUser?.login }}</p>
-                    <p><strong>Rola:</strong> {{ role }}</p>
+                <div class="user-info">
+                    <p class="userfield"><strong>Imię:</strong> {{ firstName }}</p>
+                  
+                    <p class="userfield"><strong>Login:</strong> {{ loggedInUser?.login }}</p>
+                </div>
+            
         </div>
 
         <div class="col-md-6">
-            <h2>Zmień hasło</h2>
-
             
+            <div class="col-md-6">
+                <h2>Zmień hasło</h2>
             <div class="form-group">
                 <label for="securityAnswer">Odpowiedź na pytanie pomocnicze:</label>
                 <input type="text" id="securityAnswer" [(ngModel)]="securityAnswer" class="form-control" required>
@@ -43,4 +45,12 @@
 
             <div class="alert alert-success mt-3" *ngIf="passwordChanged">Hasło zostało zmienione</div>
         </div>
+    </div>
+    </div>
+
+    <div class="end">
+        <h2>Kontakt</h2>
+        <p>Skontaktuj się z nami, aby dowiedzieć się więcej o naszej ofercie kursów i rozpocząć swoją przygodę z nauką języka!</p>
+        <p>Email: info@naukajęzyka.pl</p>
+        <p>Telefon: +48 123 456 789</p>
     </div>
