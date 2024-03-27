@@ -11,32 +11,17 @@
                     </ng-container>
                 </li>
             </ul>
-        </div>
-        <div class="col-md-6">
-            <h2>Poziomy przypisane do Ciebie:</h2>
-            <ul>
-                <li *ngFor="let task of userTasks">
-                    {{ task.name }}
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    
-                    <h2>Informacje o użytkowniku</h2>
+            <h2>Informacje o użytkowniku</h2>
                     <p><strong>Imię:</strong> {{ firstName }}</p>
                     <p><strong>Nazwisko:</strong> {{ lastName }}</p>
                     <p><strong>Login:</strong> {{ loggedInUser?.login }}</p>
                     <p><strong>Rola:</strong> {{ role }}</p>
-                </div>
-            </div>
+        </div>
+
+        <div class="col-md-6">
             <h2>Zmień hasło</h2>
 
-           
-
+            
             <div class="form-group">
                 <label for="securityAnswer">Odpowiedź na pytanie pomocnicze:</label>
                 <input type="text" id="securityAnswer" [(ngModel)]="securityAnswer" class="form-control" required>
@@ -59,6 +44,3 @@
             <div class="alert alert-success mt-3" *ngIf="passwordChanged">Hasło zostało zmienione</div>
         </div>
     </div>
-
-    
-</div>
