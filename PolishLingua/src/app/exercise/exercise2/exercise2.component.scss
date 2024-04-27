@@ -1,0 +1,100 @@
+.container {
+    
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: 10px   ;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.task-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .task-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .sentence, .word-bank {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .word {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+
+.btn {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #3b3b3b;
+    border-color: #3b3b3b;
+}
+
+.btn-primary:hover {
+    background-color: #999999;
+    border-color: #999999;
+}
+
+
+.mt-3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.end {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+}
+

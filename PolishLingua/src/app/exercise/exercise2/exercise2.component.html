@@ -1,1 +1,27 @@
-<p>exercise2 works!</p>
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="task-container">
+        <h2 class="task-title">The cat is on the table.</h2>
+        <div class="instruction">
+          <p>Drag and drop the words to arrange the sentence:</p>
+        </div>
+        <div class="word-bank" droppable (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+          <span *ngFor="let word of droppedWords" class="word">{{ word }}</span>
+        </div>
+        <div class="sentence">
+          <span *ngFor="let word of shuffledSentence" class="word" draggable="true" (dragstart)="onDragStart($event)">{{ word }}</span>
+        </div>
+        <button class="submit-button" (click)="checkSentence()">Check</button>
+      </div>
+      
+      
+</div>
+
+
+<div class="end">
+    <h2>Kontakt</h2>
+    <p>Skontaktuj się z nami, aby dowiedzieć się więcej o naszej ofercie kursów i rozpocząć swoją przygodę z nauką języka!</p>
+    <p>Email: info@naukajęzyka.pl</p>
+    <p>Telefon: +48 123 456 789</p>
+</div>

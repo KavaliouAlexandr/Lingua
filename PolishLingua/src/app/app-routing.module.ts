@@ -10,6 +10,7 @@ import { FunctionalityComponent } from './functionality/functionality.component'
 import { UserListComponent } from './user-list/user-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ExerciseComponent } from './exercise/exercise.component';
+import { Exercise2Component } from './exercise/exercise2/exercise2.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'profile/:id', component: ProfileComponent },
   { path: 'exercise', component: ExerciseComponent},
+  { path: 'exercise2', component: Exercise2Component},
 ];
 
 @NgModule({
