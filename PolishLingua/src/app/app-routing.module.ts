@@ -9,6 +9,7 @@ import { EditProjectComponent } from './projects/edit-project/edit-project.compo
 import { FunctionalityComponent } from './functionality/functionality.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ExerciseComponent } from './exercise/exercise.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'user-list', component: UserListComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'profile/:id', component: ProfileComponent },
+  { path: 'exercise', component: ExerciseComponent},
 ];
 
 @NgModule({

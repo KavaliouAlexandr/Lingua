@@ -22,7 +22,8 @@ import { DetailsTaskComponent } from './tasks/details-task/details-task.componen
 import { EditTaskComponent } from './tasks/edit-task/edit-task.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { ProfileComponent } from './profile/profile.component'
+import { ProfileComponent } from './profile/profile.component';
+import { ExerciseComponent } from './exercise/exercise.component'
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ProfileComponent } from './profile/profile.component'
     NavbarComponent,
     UserListComponent,
     ProfileComponent,
+    ExerciseComponent,
   ],
   imports: [
     BrowserModule,
