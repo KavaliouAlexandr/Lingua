@@ -1,6 +1,6 @@
 .container {
     
-    
+    text-align: center;
 }
 
 h1 {
@@ -17,27 +17,25 @@ h2 {
     font-size: 24px;
 }
 
-.row {
-    text-align: center;
-    margin-top: 20px;
-    width: 300px; 
-    margin: 0 auto;
-    
-   
-}
+
 
 .task-container {
+    margin: 0 auto;
     text-align: center;
-    padding-top: 80px;
-    
-  }
-  
-  .task-title {
+    padding: 80px;
+    height: fit-content;
+    width: 700px;
+    border: 1px solid #d6d6d6;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+}
+
+.task-title {
     font-size: 40px;
     margin-bottom: 20px;
-  }
+}
 
-  .task-title::after {
+.task-title::after {
     content: "";
     display: block;
     width: 100px;
@@ -45,28 +43,30 @@ h2 {
     margin: 25px auto 0px;
 
     background-color: #3b3b3b;
-  }
+}
   
-  .sentence {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
+.sentence {
+    font-size: 29px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
   
-  .answer-container {
+.answer-container {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .answer-input {
+.answer-input {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-  }
+}
   
-  .submit-button {
+.submit-button {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -74,11 +74,11 @@ h2 {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-  }
+}
   
-  .submit-button:hover {
+.submit-button:hover {
     background-color: #0056b3;
-  }
+}
 
 .col {
     margin-bottom: 20px;
