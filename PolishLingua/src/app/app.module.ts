@@ -23,7 +23,8 @@ import { EditTaskComponent } from './tasks/edit-task/edit-task.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ExerciseComponent } from './exercise/exercise.component'
+import { ExerciseComponent } from './exercise/exercise.component';
+import { Exercise2Component } from './exercise/exercise2/exercise2.component'
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ExerciseComponent } from './exercise/exercise.component'
     UserListComponent,
     ProfileComponent,
     ExerciseComponent,
+    Exercise2Component,
   ],
   imports: [
     BrowserModule,
