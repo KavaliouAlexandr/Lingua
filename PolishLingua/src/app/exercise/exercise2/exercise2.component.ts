@@ -40,4 +40,9 @@ export class Exercise2Component {
       alert('Incorrect!');
     }
   }
+
+  refreshTask() {
+    this.shuffledSentence = this.shuffleArray([...this.sentence]);
+    this.droppedWords = [];
+  }
 }

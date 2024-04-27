@@ -4,7 +4,7 @@
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
@@ -19,43 +19,84 @@ h2 {
 
 .task-container {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
   }
   
   .task-title {
     font-size: 24px;
     margin-bottom: 20px;
   }
+
+  .translation {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.translation::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 25px auto 0px;
+
+    background-color: #3b3b3b;
+}
   
-  .sentence, .word-bank {
+.sentence, .word-bank {
+    width: 500px;
+    margin: 0 auto;
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
-  }
+    height: 65px;
+    border-radius: 10px;
+    background-color: #d1d1d1;
+}
   
-  .word {
+.word {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #3b3b3b;
     color: white;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
-  }
+}
   
-  .submit-button {
+.submit-button {
     padding: 10px 20px;
-    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-  }
+}
   
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
+
+.refresh-button {
+    margin-right: 20px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button,  
+.refresh-button {
+    width: 200px;
+    background-color: #3b3b3b;
+    border-color: #3b3b3b;
+}
+
+.submit-button:hover,  
+.refresh-button:hover {
+    background-color: #999999;
+    border-color: #999999;
+}
+
 
 .btn {
     font-size: 20px;

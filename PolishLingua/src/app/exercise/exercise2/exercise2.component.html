@@ -1,6 +1,8 @@
 <app-navbar></app-navbar>
 
 <div class="container">
+    <h1>Zadanie 2</h1>
+    <h2 class="translation">Tłumaczenie</h2>
     <div class="task-container">
         <h2 class="task-title">The cat is on the table.</h2>
         <div class="instruction">
@@ -12,9 +14,9 @@
         <div class="sentence">
           <span *ngFor="let word of shuffledSentence" class="word" draggable="true" (dragstart)="onDragStart($event)">{{ word }}</span>
         </div>
+        <button class="refresh-button" (click)="refreshTask()">Refresh</button>
         <button class="submit-button" (click)="checkSentence()">Check</button>
       </div>
-      
       
 </div>
 
