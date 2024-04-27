@@ -147,4 +147,11 @@ export class ProfileComponent {
       this.passwordChanged = true;
     }
   }
+
+  // private getDefaultProjects(): Project[] {
+  //   workOnProject(projectId: string) {
+  //     localStorage.setItem('projectId', projectId);
+  //     this.router.navigate(['/functionality', projectId]);
+  //   }
+  // }
 }

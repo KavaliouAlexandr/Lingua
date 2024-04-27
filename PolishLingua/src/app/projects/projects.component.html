@@ -17,8 +17,7 @@
                 </div>
             </div>
         </div>
-        <button *ngIf="userRole === 'Admin' || userRole === 'DevOps'" class="btn btn-primary"
-            (click)="toggleAddForm()">Nowy projekt</button>
+        
         <div *ngIf="showAddForm">
             <h3 *ngIf="editMode">Edytuj projekt</h3>
             <h3 *ngIf="!editMode">Dodaj projekt</h3>

@@ -37,6 +37,28 @@ li {
     font-weight: bold;
 }
 
+.card {
+    max-width: 400px;
+   
+}
+
+.card-mb-4 {
+   
+    max-width: 400px;
+   
+}
+
+.card-body {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.card-title {
+    max-width: 600px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 .form-control {
     width: 100%;
     border: 3px solid #ccc;
@@ -106,3 +128,4 @@ li {
     text-align: center;
     
 }
+
