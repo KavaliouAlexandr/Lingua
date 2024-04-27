@@ -58,6 +58,7 @@ h2 {
     display: inline-block;
     padding: 5px 10px;
     background-color: #3b3b3b;
+    border-radius: 5px;
     color: white;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -97,6 +98,14 @@ h2 {
     border-color: #999999;
 }
 
+.incorrect-message {
+    color: red;
+    padding-top: 5px;
+  }
+  
+  .submit-button.incorrect {
+    background-color: red;
+  }
 
 .btn {
     font-size: 20px;

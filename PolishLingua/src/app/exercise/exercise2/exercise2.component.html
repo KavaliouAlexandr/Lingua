@@ -14,8 +14,9 @@
         <div class="sentence">
           <span *ngFor="let word of shuffledSentence" class="word" draggable="true" (dragstart)="onDragStart($event)">{{ word }}</span>
         </div>
-        <button class="refresh-button" (click)="refreshTask()">Refresh</button>
-        <button class="submit-button" (click)="checkSentence()">Check</button>
+        <button class="refresh-button" (click)="refreshTask()">Odśwież</button>
+        <button class="submit-button" (click)="checkSentence()">Sprawdź</button>
+        <p *ngIf="showIncorrect" class="incorrect-message">Nieprawidłowo! Spróbuj ponownie.</p>
       </div>
       
 </div>

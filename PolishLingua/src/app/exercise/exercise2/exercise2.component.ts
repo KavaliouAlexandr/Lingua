@@ -9,6 +9,7 @@ export class Exercise2Component {
   sentence: string[] = ['Kot', 'jest', 'na', 'stole', 'i', 'pije', 'wodę'];
   shuffledSentence: string[] = [];
   droppedWords: string[] = [];
+  showIncorrect: boolean = false;
 
   constructor() {
     this.shuffledSentence = this.shuffleArray([...this.sentence]);
@@ -36,13 +37,15 @@ export class Exercise2Component {
   checkSentence() {
     if (JSON.stringify(this.droppedWords) === JSON.stringify(this.sentence)) {
       alert('Correct!');
+      this.showIncorrect = false;
     } else {
-      alert('Incorrect!');
+      this.showIncorrect = true;
     }
   }
 
   refreshTask() {
     this.shuffledSentence = this.shuffleArray([...this.sentence]);
     this.droppedWords = [];
+    this.showIncorrect = false;
   }
 }
