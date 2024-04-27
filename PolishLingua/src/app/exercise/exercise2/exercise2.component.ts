@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./exercise2.component.scss']
 })
 export class Exercise2Component {
-  sentence: string[] = ['The', 'cat', 'is', 'on', 'the', 'table'];
+  sentence: string[] = ['Kot', 'jest', 'na', 'stole', 'i', 'pije', 'wodę'];
   shuffledSentence: string[] = [];
   droppedWords: string[] = [];
 

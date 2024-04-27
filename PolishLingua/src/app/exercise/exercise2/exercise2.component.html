@@ -2,11 +2,11 @@
 
 <div class="container">
     <h1>Zadanie 2</h1>
-    <h2 class="translation">Tłumaczenie</h2>
+    <h2 class="translation">Dopasowanie</h2>
     <div class="task-container">
-        <h2 class="task-title">The cat is on the table.</h2>
+        <h2 class="task-title">The cat is on the table and drinking water</h2>
         <div class="instruction">
-          <p>Drag and drop the words to arrange the sentence:</p>
+          <p>Przeciągnij słowa, aby ułożyć zdanie:</p>
         </div>
         <div class="word-bank" droppable (drop)="onDrop($event)" (dragover)="onDragOver($event)">
           <span *ngFor="let word of droppedWords" class="word">{{ word }}</span>
