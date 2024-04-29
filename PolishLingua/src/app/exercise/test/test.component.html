@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h1>Test A2</h1>
+    <div class="result-container">
+        <h2 class="result-title">Test Results</h2>
+        <div class="progress-circle">
+          <div class="progress" [style.strokeDashoffset]="strokeDashoffset">
+            <svg viewBox="0 0 100 100">
+              <path class="circle" fill="none" stroke="#f2f2f2" stroke-width="10" d="M50 10
+                  a 40 40 0 0 1 0 80
+                  a 40 40 0 0 1 0 -80" />
+              <path class="fill" fill="none" stroke="#007bff" stroke-width="10" [style.strokeDashoffset]="strokeDashoffset" d="M50 10
+                  a 40 40 0 0 1 0 80
+                  a 40 40 0 0 1 0 -80" />
+            </svg>
+            <span class="percent">{{ (score / totalQuestions * 100).toFixed() }}%</span>
+          </div>
+        </div>
+        <p class="result-message">Your score: {{ score }} / {{ totalQuestions }}</p>
+        <button class="restart-button" (click)="restartTest()">Restart Test</button>
+      </div>
+      
+</div>
+
+
+<div class="end">
+    <h2>Kontakt</h2>
+    <p>Skontaktuj się z nami, aby dowiedzieć się więcej o naszej ofercie kursów i rozpocząć swoją przygodę z nauką języka!</p>
+    <p>Email: info@naukajęzyka.pl</p>
+    <p>Telefon: +48 123 456 789</p>
+</div>

@@ -24,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ExerciseComponent } from './exercise/exercise.component';
-import { Exercise2Component } from './exercise/exercise2/exercise2.component'
+import { Exercise2Component } from './exercise/exercise2/exercise2.component';
+import { TestComponent } from './exercise/test/test.component'
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { Exercise2Component } from './exercise/exercise2/exercise2.component'
     ProfileComponent,
     ExerciseComponent,
     Exercise2Component,
+    TestComponent,
   ],
   imports: [
     BrowserModule,

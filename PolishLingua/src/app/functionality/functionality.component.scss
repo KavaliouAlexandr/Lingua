@@ -11,6 +11,15 @@ h1 {
     margin-left: 10px   ;
 }
 
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 25px auto 0px;
+    background-color: #3b3b3b;
+}
+
 h2 {
     text-align: center;
     margin-top: 10px;
