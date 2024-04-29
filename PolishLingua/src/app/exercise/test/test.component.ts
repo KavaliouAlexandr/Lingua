@@ -15,7 +15,7 @@ export class TestComponent {
   ngOnInit(): void {
     this.score = Math.floor(Math.random() * 10) + 1;
     this.totalQuestions = 10;
-    this.strokeDashoffset = 251.2 * (1 - this.score / this.totalQuestions);
+    this.strokeDashoffset = 565.48 * (1 - this.score / this.totalQuestions);
   }
 
   restartTest() {
