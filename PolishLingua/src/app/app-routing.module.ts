@@ -12,6 +12,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { Exercise2Component } from './exercise/exercise2/exercise2.component';
 import { TestComponent } from './exercise/test/test.component';
+import { Exercise3Component } from './exercise/exercise3/exercise3.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'exercise', component: ExerciseComponent},
   { path: 'exercise2', component: Exercise2Component},
   { path: 'test', component: TestComponent}, 
+  { path: 'exercise3', component: Exercise3Component},
 ];
 
 @NgModule({

@@ -25,7 +25,8 @@ import { UserListComponent } from './user-list/user-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { Exercise2Component } from './exercise/exercise2/exercise2.component';
-import { TestComponent } from './exercise/test/test.component'
+import { TestComponent } from './exercise/test/test.component';
+import { Exercise3Component } from './exercise/exercise3/exercise3.component'
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { TestComponent } from './exercise/test/test.component'
     ExerciseComponent,
     Exercise2Component,
     TestComponent,
+    Exercise3Component,
   ],
   imports: [
     BrowserModule,
