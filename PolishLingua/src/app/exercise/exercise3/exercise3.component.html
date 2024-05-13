@@ -3,10 +3,41 @@
 <div class="container">
     <h1>Zadanie 3</h1>
     <h2 class="translation">Słuchanie</h2>
-
     <div class="listening">
+        <div>
+          <audio controls>
+            <source src="assets/audio/loremipsum.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          </div>
+    </div>
+    <div class="questions">
+          <div>
+            <p class="p1">1. Czy to prawda, że kot był na stole?</p>
+            <button (click)="selectAnswer(true)">Prawda</button>
+            <button (click)="selectAnswer(false)">Fałsz</button>
+          </div>
 
-    </div>  
+          <div>
+            <p class="p1">2. Czy to prawda, że kot pił wodę?</p>
+            <button (click)="selectAnswer(true)">Prawda</button>
+            <button (click)="selectAnswer(false)">Fałsz</button>
+          </div>
+
+          <div>
+            <p class="p1">3. Czy to prawda, że kot był czarny?</p>
+            <button (click)="selectAnswer(true)">Prawda</button>
+            <button (click)="selectAnswer(false)">Fałsz</button>
+          </div>
+
+          <div>
+            <p class="p1">4. Czy to prawda, że kot był brudny?</p>
+            <button (click)="selectAnswer(true)">Prawda</button>
+            <button (click)="selectAnswer(false)">Fałsz</button>
+          </div>
+
+        </div>  
+        <button class="submit-button">Sprawdź</button>
 </div>
 
 <div class="end">

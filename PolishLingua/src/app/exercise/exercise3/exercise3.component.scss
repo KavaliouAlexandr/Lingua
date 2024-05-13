@@ -21,6 +21,61 @@ h2 {
     text-align: center;
     margin-top: 20px;
     font-size: 24px;
+    
+}
+
+.listening {
+    margin: 20px 0;
+}
+
+audio {
+    width: 500px;
+    
+}
+
+.questions {
+  margin-top: 20px; 
+  columns: 2; 
+  width: 700px;
+  margin: 0 auto;
+}
+
+.p1 {
+    font-size: 18px; 
+    font-weight: bold;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    background-color: #3b3b3b;
+    border-color: #3b3b3b;
+    margin-bottom: 20px;
+}
+
+
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    background-color: #3b3b3b;
+    border-color: #3b3b3b;
+}
+
+.submit-button:hover {
+    background-color: #999999;
+    border-color: #999999;
 }
 
 .translation::after {
