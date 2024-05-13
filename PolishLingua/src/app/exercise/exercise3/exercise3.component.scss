@@ -59,7 +59,11 @@ button {
     margin-bottom: 20px;
 }
 
-
+button.pressed {
+    background-color: #999999;
+    border-color: #999999;
+  }
+  
 .submit-button {
     margin-top: 20px;
     padding: 10px 20px;

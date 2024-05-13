@@ -6,15 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercise3.component.scss']
 })
 export class Exercise3Component implements OnInit {
-  isAnswerCorrect: boolean | null = null;
+  isButtonPressed: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  selectAnswer(isTrue: boolean) {
-    // Здесь можно добавить логику для проверки ответа
-    this.isAnswerCorrect = isTrue;
+  // selectAnswer(isTrue: boolean) {
+  //   // Здесь можно добавить логику для проверки ответа
+  //   this.isAnswerCorrect = isTrue;
+  // }
+
+  toggleButton() {
+    this.isButtonPressed = !this.isButtonPressed;
   }
 }
